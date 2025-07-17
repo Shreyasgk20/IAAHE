@@ -53,9 +53,9 @@
         </tr>
         <tr>
             <td class="label"><span class="dot">&bull;</span> Type of Institution:</td>
-            <td class="option-cell"><label><input type="radio" name="type" class="square-radio"> Public</label></td>
-            <td class="option-cell"><label><input type="radio" name="type" class="square-radio"> Private Not-for-Profit</label></td>
-            <td class="option-cell"><label><input type="radio" name="type" class="square-radio"> Private For-Profit</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="type" class="square-radio radio-checkbox" value="public"> Public</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="type" class="square-radio radio-checkbox" value="private-nfp"> Private Not-for-Profit</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="type" class="square-radio radio-checkbox" value="private-fp"> Private For-Profit</label></td>
             <td class="details-cell"><button class="details-btn details-btn-type" type="button">Details</button></td>
         </tr>
         <tr id="type-details-row" class="details-hidden">
@@ -63,6 +63,7 @@
                 <div class="details-box">
                     <div class="details-header details-center">
                         Classification by Type of Institution
+                        <button class="close-details-header" type="button" onclick="hideTypeDetails()">✕</button>
                     </div>
                     <div class="details-section details-center"><b>Public Higher Education Institutions (HEIs)</b></div>
                     <div class="details-section details-center">HEIs that are funded mainly by state, provincial, prefectural, or national governments</div>
@@ -78,9 +79,9 @@
         </tr>
         <tr>
             <td class="label"><span class="dot">&bull;</span> Enrollment Size:</td>
-            <td class="option-cell"><label><input type="radio" name="enrollment" class="square-radio"> Small</label></td>
-            <td class="option-cell"><label><input type="radio" name="enrollment" class="square-radio"> Medium Size</label></td>
-            <td class="option-cell"><label><input type="radio" name="enrollment" class="square-radio"> Large</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="enrollment" class="square-radio radio-checkbox" value="small"> Small</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="enrollment" class="square-radio radio-checkbox" value="medium"> Medium Size</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="enrollment" class="square-radio radio-checkbox" value="large"> Large</label></td>
             <td class="details-cell"><button class="details-btn details-btn-enrollment" type="button">Details</button></td>
         </tr>
         <tr id="enrollment-details-row" class="details-hidden">
@@ -88,6 +89,7 @@
                 <div class="details-box">
                     <div class="details-header details-center">
                         Classification by Enrollment Size
+                        <button class="close-details-header" type="button" onclick="hideEnrollmentDetails()">✕</button>
                     </div>
                     <div class="details-section details-center"><b>Small Institutions</b></div>
                     <div class="details-section details-center">Institutions with a full-time equivalent (FTE) enrollment of fewer than 3000 degree-seeking / diploma-seeking students</div>
@@ -104,8 +106,8 @@
         </tr>
         <tr>
             <td class="label"><span class="dot">&bull;</span> Educational Orientation:</td>
-            <td class="option-cell"><label><input type="radio" name="orientation" class="square-radio"> Teaching Oriented</label></td>
-            <td class="option-cell"><label><input type="radio" name="orientation" class="square-radio"> Research Oriented</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="orientation" class="square-radio radio-checkbox" value="teaching"> Teaching Oriented</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="orientation" class="square-radio radio-checkbox" value="research"> Research Oriented</label></td>
             <td class="option-cell"></td>
             <td class="details-cell"><button class="details-btn details-btn-orientation" type="button">Details</button></td>
         </tr>
@@ -114,6 +116,7 @@
                 <div class="details-box">
                     <div class="details-header details-center">
                         Classification by Educational Orientation
+                        <button class="close-details-header" type="button" onclick="hideOrientationDetails()">✕</button>
                     </div>
                     <div class="details-section details-center"><b>Teaching-Oriented Institutions</b></div>
                     <div class="details-section details-left">Institutions for which:<br>
@@ -137,8 +140,8 @@
         </tr>
         <tr>
             <td class="label"><span class="dot">&bull;</span> Program Range:</td>
-            <td class="option-cell"><label><input type="radio" name="program" class="square-radio"> Broad Scope</label></td>
-            <td class="option-cell"><label><input type="radio" name="program" class="square-radio"> Limited Scope</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="program" class="square-radio radio-checkbox" value="broad"> Broad Scope</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="program" class="square-radio radio-checkbox" value="limited"> Limited Scope</label></td>
             <td class="option-cell"></td>
             <td class="details-cell"><button class="details-btn details-btn-program" type="button">Details</button></td>
         </tr>
@@ -147,6 +150,7 @@
                 <div class="details-box">
                     <div class="details-header details-center">
                         Classification by Program Range
+                        <button class="close-details-header" type="button" onclick="hideProgramDetails()">✕</button>
                     </div>
                     <div class="details-section details-center"><b>Limited Scope Institutions</b></div>
                     <div class="details-section details-left">Institutions that:<br>
@@ -206,9 +210,9 @@
         </tr>
         <tr>
             <td class="label"><span class="dot">&bull;</span> Degree / Diploma Level:</td>
-            <td class="option-cell"><label><input type="radio" name="degree" class="square-radio"> Only Undergraduate</label></td>
-            <td class="option-cell"><label><input type="radio" name="degree" class="square-radio"> Only Graduate</label></td>
-            <td class="option-cell"><label><input type="radio" name="degree" class="square-radio"> Both Undergraduate / Graduate</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="degree" class="square-radio radio-checkbox" value="undergrad"> Only Undergraduate</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="degree" class="square-radio radio-checkbox" value="graduate"> Only Graduate</label></td>
+            <td class="option-cell"><label><input type="checkbox" name="degree" class="square-radio radio-checkbox" value="both"> Both Undergraduate / Graduate</label></td>
             <td class="details-cell"><button class="details-btn details-btn-degree" type="button">Details</button></td>
         </tr>
         <tr id="degree-details-row" class="details-hidden">
@@ -216,6 +220,7 @@
                 <div class="details-box">
                     <div class="details-header details-center" style="background: #21929b; color: #fff; font-size: 22px; font-weight: bold;">
                         Classification by Degree / Diploma Level
+                        <button class="close-details-header" type="button" onclick="hideDegreeDetails()">✕</button>
                     </div>
                     <div class="details-section" style="background: #d2f0f3; color: #1d4c6c; font-weight: bold; font-size: 20px; text-align: center;">
                         Institutions with Exclusively Short-Cycle Programs at the Undergraduate Level

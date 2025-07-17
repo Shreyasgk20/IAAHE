@@ -519,7 +519,33 @@ html {
 } 
 .details-header.details-center {
     text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-details-header {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 16px;
+    padding: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    font-family: Arial, sans-serif;
+}
+
+.close-details-header:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+    border-color: rgba(255, 255, 255, 0.5);
 }
 .details-footer-flex {
     display: flex;

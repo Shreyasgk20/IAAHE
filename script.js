@@ -170,4 +170,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     var closeBtnDegree = document.querySelector('.close-details-degree');
     if (closeBtnDegree) closeBtnDegree.addEventListener('click', hideDegreeDetails);
-}); 
+});
+
+document.querySelectorAll('.radio-checkbox').forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        if (this.checked) {
+            document.querySelectorAll('input[name="' + this.name + '"]').forEach(function(box) {
+                if (box !== checkbox) box.checked = false;
+            });
+        }
+    });
+});
