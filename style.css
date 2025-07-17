@@ -523,6 +523,23 @@ html {
     align-items: center;
 }
 
+.details-footer-btn {
+    background: #f7f7f7;
+    color: #2176ae;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 6px 18px;
+    border: 1.5px solid #bfc5c9;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
+}
+
+.details-footer-btn:hover {
+    background: #e0e6ed;
+    color: #155a8a;
+}
+
 .close-details-header {
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(255, 255, 255, 0.3);

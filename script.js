@@ -181,3 +181,38 @@ document.querySelectorAll('.radio-checkbox').forEach(function(checkbox) {
         }
     });
 });
+
+// Function to scroll to the heading of the section
+function scrollToFirstRow(type) {
+    let targetElement;
+    
+    // Get all label cells with dots
+    const labelCells = document.querySelectorAll('td.label:has(span.dot)');
+    
+    switch(type) {
+        case 'type':
+            targetElement = labelCells[0]; // First label cell
+            break;
+        case 'enrollment':
+            targetElement = labelCells[1]; // Second label cell
+            break;
+        case 'orientation':
+            targetElement = labelCells[2]; // Third label cell
+            break;
+        case 'program':
+            targetElement = labelCells[3]; // Fourth label cell
+            break;
+        case 'degree':
+            targetElement = labelCells[4]; // Fifth label cell
+            break;
+        default:
+            return;
+    }
+    
+    if (targetElement) {
+        targetElement.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'start' 
+        });
+    }
+}
